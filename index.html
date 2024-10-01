@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Игра Жизнь</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header class="title">
+      <h1>Игра Жизнь</h1>
+    </header>
+
+    <main class="main">
+        <canvas id="canvas" width="500" height="500" onclick="addCell(event)"></canvas>
+      <div class="settings">
+        <div>
+            <span>Время генерации (вычисление и отрисовка):</span>
+            <span class="new-generation-time-value">-</span>
+            <span>ms</span>
+        </div>
+        <div>
+          <label for="size">Размер сетки:</label>
+          <input class="settings-size-grid" type="number" name="size" id="size" value="100" onchange="setSize(event)"/>
+        </div>
+        <div class="settings-buttons">
+          <button onclick="generateGrid()">Сгенерировать</button>
+          <button class="play-button" onclick="play()">Старт</button>
+        </div>
+    </main>
+  </body>
+
+  <script src="game.js"></script>
+</html>
